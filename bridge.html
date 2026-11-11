@@ -2,104 +2,254 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Староволжский мост</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-        }
+<title>Староволжский мост — путеводитель по Твери</title>
 
-        h1 {
-            color: #245782;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        h2 {
-            color: #245782;
-        }
+body {
+    margin: 0;
+    background: #f3f0e9;
+    color: #283d50;
+    font-family: Arial, sans-serif;
+}
 
-        p, li {
-            line-height: 1.7;
-        }
+header {
+    padding: 22px 7%;
+    border-bottom: 1px solid #d9d5cb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        a {
-            color: #245782;
-        }
-        .bridge-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
+.logo {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.back {
+    color: #315c7c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+main {
+    max-width: 950px;
+    margin: 45px auto;
+    padding: 0 25px 60px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #947e5e;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: normal;
     margin: 20px 0;
 }
-    </style>
+
+.hero-image {
+    width: 100%;
+    max-height: 470px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.lead {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    line-height: 1.7;
+    color: #536a7c;
+    max-width: 800px;
+}
+
+.divider {
+    height: 1px;
+    background: #d9d5cb;
+    margin: 35px 0;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #53616e;
+}
+
+.facts {
+    background: #fffefa;
+    border: 1px solid #e5e0d6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 25px;
+}
+
+.facts li {
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+.note {
+    background: #e9eef0;
+    border-left: 4px solid #54758c;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0 10px 10px 0;
+    line-height: 1.8;
+}
+
+.bottom-link {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 22px;
+    background: #315c7c;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.bottom-link:hover {
+    background: #24465f;
+}
+
+footer {
+    border-top: 1px solid #d9d5cb;
+    text-align: center;
+    padding: 25px;
+    color: #82909b;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 18px;
+    }
+
+    main {
+        margin-top: 30px;
+        padding: 0 18px 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .lead {
+        font-size: 19px;
+    }
+
+    .hero-image {
+        max-height: 280px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .facts {
+        padding: 20px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Староволжский мост</h1>
-        <img
-    src="global/Без%20названия.png"
-    alt="Староволжский мост через Волгу в Твери"
-    class="bridge-image"
->
-        <p>
-            Староволжский мост — исторический
-            автомобильный мост через Волгу
-            и одна из узнаваемых
-            достопримечательностей Твери.
-        </p>
 
-        <h2>Описание</h2>
+<header>
+    <div class="logo">ТВЕРЬ</div>
+    <a class="back" href="index.html">← Все достопримечательности</a>
+</header>
 
-        <p>
-            Главная особенность моста —
-            металлическая конструкция
-            с ажурными фермами.
-            Мост соединяет Центральный
+<main>
+
+    <div class="eyebrow">01 / Архитектура и история</div>
+
+    <h1>Староволжский мост</h1>
+
+    <img
+        class="hero-image"
+        src="global/Без%20названия.png"
+        alt="Староволжский мост через Волгу в Твери"
+    >
+
+    <p class="lead">
+        Староволжский мост — исторический автомобильный мост
+        через Волгу и одна из узнаваемых достопримечательностей Твери.
+    </p>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Архитектура моста</h2>
+
+        <p class="content">
+            Главная особенность моста — металлическая конструкция
+            с ажурными фермами. Мост соединяет Центральный
             и Заволжский районы города.
         </p>
+    </section>
 
+    <div class="divider"></div>
+
+    <section>
         <h2>Интересные факты</h2>
 
-        <ul>
-            <li>
-                Строительство началось в 1897 году.
-            </li>
-            <li>
-                Мост открыли 8 сентября 1900 года.
-            </li>
-            <li>
-                По мосту раньше ходили трамваи.
-            </li>
-            <li>
-                Во время войны мост был разрушен,
-                а затем восстановлен.
-            </li>
-        </ul>
+        <div class="facts">
+            <ul>
+                <li>Строительство началось в 1897 году.</li>
+                <li>Мост открыли 8 сентября 1900 года.</li>
+                <li>По мосту раньше ходили трамваи.</li>
+                <li>Во время войны мост был разрушен, а затем восстановлен.</li>
+            </ul>
+        </div>
+    </section>
 
+    <div class="divider"></div>
+
+    <section>
         <h2>На что обратить внимание</h2>
 
-        <p>
-            Рассмотрите металлические конструкции
-            моста и полюбуйтесь видом на Волгу
-            и исторический центр Твери.
+        <p class="content">
+            Рассмотрите металлические конструкции моста
+            и полюбуйтесь видом на Волгу и исторический центр Твери.
         </p>
 
-        <a href="index.html">
-            ← Вернуться на главную
-        </a>
-    </div>
+        <div class="note">
+            Староволжский мост — одна из узнаваемых частей
+            исторического облика города.
+        </div>
+    </section>
+
+    <a class="bottom-link" href="index.html">
+        ← Вернуться к достопримечательностям
+    </a>
+
+</main>
+
+<footer>
+    ТВЕРЬ · ПУТЕВОДИТЕЛЬ ПО ДОСТОПРИМЕЧАТЕЛЬНОСТЯМ · 2026
+</footer>
+
 </body>
 </html>
+
