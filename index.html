@@ -1,121 +1,279 @@
 
 
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Достопримечательности Твери</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тверь — город на Волге</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-        }
-
-        h1, h2 {
-            color: #245782;
-        }
-        @media (max-width: 600px) {
-    h1 {
-        font-size: 26px;
-        overflow-wrap: anywhere;
-    }
+<style>
+* {
+    box-sizing: border-box;
 }
 
-        p, li {
-            line-height: 1.7;
-        }
+body {
+    margin: 0;
+    background: #f3f0e9;
+    color: #283d50;
+    font-family: Arial, sans-serif;
+}
 
-        a {
-            color: #245782;
-            text-decoration: none;
-        }
+header {
+    padding: 25px 7%;
+    border-bottom: 1px solid #d9d5cb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 
-        .place {
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e0e5ea;
-        }
+.header-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #718393;
+}
 
-        .place p {
-            margin-bottom: 5px;
-        }
-    </style>
+.hero {
+    max-width: 1100px;
+    margin: 65px auto 45px;
+    padding: 0 25px;
+}
+
+.eyebrow {
+    color: #8a795f;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 7vw, 72px);
+    line-height: 1.08;
+    font-weight: normal;
+    max-width: 850px;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: #647381;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.divider {
+    height: 1px;
+    background: #d9d5cb;
+    margin: 40px 0;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #788590;
+    line-height: 1.7;
+}
+
+.places {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px 60px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.place {
+    background: #fffefa;
+    border: 1px solid #e5e0d6;
+    border-radius: 12px;
+    padding: 27px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.place:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(40,61,80,.09);
+}
+
+.place-number {
+    color: #9a876a;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.place h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 15px 0 10px;
+}
+
+.place p {
+    color: #697987;
+    line-height: 1.7;
+    min-height: 50px;
+}
+
+.place a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #315c7c;
+    text-decoration: none;
+    border-bottom: 1px solid #9aafbd;
+    padding-bottom: 4px;
+}
+
+.place a:hover {
+    color: #8a795f;
+}
+
+footer {
+    border-top: 1px solid #d9d5cb;
+    text-align: center;
+    padding: 30px 20px;
+    color: #82909b;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place {
+        padding: 23px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <div class="logo">ТВЕРЬ</div>
+    <div class="header-label">Путеводитель по городу</div>
+</header>
 
-    <h1>Достопримечательности Твери</h1>
+<section class="hero">
+    <div class="eyebrow">Путешествие по истории города</div>
+
+    <h1>Тверь — город на Волге</h1>
 
     <p>
-        Добро пожаловать на информационный сайт,
-        посвящённый интересным и историческим
-        местам города Твери.
+        Город с богатой историей, красивой архитектурой
+        и особенной атмосферой. Познакомьтесь с местами,
+        которые делают Тверь уникальной.
     </p>
 
-    <p>
-        Здесь вы можете познакомиться с историей
-        достопримечательностей, узнать интересные
-        факты и посмотреть фотографии.
+    <div class="divider"></div>
+
+    <div class="eyebrow">Откройте для себя город</div>
+</section>
+
+<main class="places">
+
+    <h2 class="section-title">Достопримечательности</h2>
+
+    <p class="section-description">
+        Выберите интересующее место и узнайте его историю,
+        особенности и интересные факты.
     </p>
 
-    <h2>Достопримечательности</h2>
+    <div class="places-grid">
 
-    <div class="place">
-        <h2>Староволжский мост</h2>
-        <p>Исторический автомобильный мост через Волгу.</p>
-        <a href="Староволжский_мост.html">Подробнее →</a>
+        <article class="place">
+            <span class="place-number">01 / МОСТЫ</span>
+            <h3>Староволжский мост</h3>
+            <p>Исторический автомобильный мост через Волгу.</p>
+            <a href="Староволжский_мост.html">Исследовать →</a>
+        </article>
+
+        <article class="place">
+            <span class="place-number">02 / АРХИТЕКТУРА</span>
+            <h3>Путевой дворец</h3>
+            <p>Знаменитый архитектурный и исторический памятник Твери.</p>
+            <a href="Путевой_дворец.html">Исследовать →</a>
+        </article>
+
+        <article class="place">
+            <span class="place-number">03 / ИСТОРИЯ</span>
+            <h3>Афанасий Никитин</h3>
+            <p>История знаменитого тверского путешественника.</p>
+            <a href="Афанасий_Никитин.html">Исследовать →</a>
+        </article>
+
+        <article class="place">
+            <span class="place-number">04 / АРХИТЕКТУРА</span>
+            <h3>Речной вокзал</h3>
+            <p>Известное архитектурное сооружение на берегу Волги.</p>
+            <a href="rechnoyVokzal.html">Исследовать →</a>
+        </article>
+
+        <article class="place">
+            <span class="place-number">05 / КУЛЬТУРА</span>
+            <h3>Михаил Круг</h3>
+            <p>Страница, посвящённая известному исполнителю.</p>
+            <a href="MikhailKrug.html">Исследовать →</a>
+        </article>
+
+        <article class="place">
+            <span class="place-number">06 / УЛИЦЫ</span>
+            <h3>Трёхсвятская улица</h3>
+            <p>Одна из известных исторических и пешеходных улиц Твери.</p>
+            <a href="Station.html">Исследовать →</a>
+        </article>
+
     </div>
+</main>
 
-    <div class="place">
-        <h2>Путевой дворец</h2>
-        <p>Знаменитый архитектурный и исторический памятник Твери.</p>
-        <a href="Путевой_дворец.html">Подробнее →</a>
-    </div>
-
-    <div class="place">
-        <h2>Афанасий Никитин</h2>
-        <p>Страница о знаменитом тверском путешественнике.</p>
-        <a href="Афанасий_Никитин.html">Подробнее →</a>
-    </div>
-
-    <div class="place">
-        <h2>Речной вокзал</h2>
-        <p>Один из известных архитектурных объектов города.</p>
-        <a href="rechnoyVokzal.html">Подробнее →</a>
-    </div>
-
-    <div class="place">
-        <h2>Михаил Круг</h2>
-        <p>Страница, посвящённая известному исполнителю.</p>
-        <a href="MikhailKrug.html">Подробнее →</a>
-    </div>
-    
-    <div class="place">
-    <h2>Трёхсвятская улица</h2>
-    <p>Одна из известных исторических и пешеходных улиц Твери.</p>
-    <a href="Station.html">Подробнее →</a>
-</div>
-
-</div>
+<footer>
+    ТВЕРЬ · ПУТЕВОДИТЕЛЬ ПО ДОСТОПРИМЕЧАТЕЛЬНОСТЯМ · 2026
+</footer>
 
 </body>
 </html>
